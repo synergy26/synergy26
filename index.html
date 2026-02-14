@@ -45,19 +45,20 @@ section{
   /* ================= RESPONSIVE DESIGN ================= */
 
 /* Tablets */
-@media (max-width: 992px) {
-
-  section{
-    padding:120px 30px 60px;
-  }
+@media(max-width:768px){
 
   .synergy{
-    font-size:80px;
+    font-size:42px !important;
+    flex-wrap:wrap;
+    line-height:1.2;
   }
 
   .eee-icon{
-    font-size:70px;
+    font-size:32px !important;
   }
+
+}
+
 
   .contact-container,
   .register-container{
@@ -1236,23 +1237,37 @@ footer{
   }
 
 }
+@media (max-width:768px){
 
-@media (max-width: 480px){
-
-  h1{
-    font-size:26px !important;
+  .main-title{
+    font-size:18px;
   }
 
-  h2{
-    font-size:20px !important;
+  .tagline{
+    font-size:18px;
   }
 
-  button,
-  .btn{
-    width:100%;
+  .about-title{
+    font-size:32px;
   }
 
+  .events-title{
+    font-size:30px;
+  }
+
+  .register-main-title{
+    font-size:32px;
+  }
+
+  .contact-title{
+    font-size:32px;
+  }
+
+  p{
+    font-size:14px;
+  }
 }
+
 .hero{
   min-height:100vh;
   display:flex;
@@ -1305,16 +1320,13 @@ footer{
   flex:1 1 300px;
   max-width:350px;
 }
-/* ================= MOBILE FIX ================= */
+/* MOBILE NAV FIX */
+.menu-toggle{
+  display:none;
+}
 
 @media (max-width:768px){
 
-  /* Hide normal nav */
-  nav ul{
-    display:none;
-  }
-
-  /* Show hamburger */
   .menu-toggle{
     display:block;
     font-size:26px;
@@ -1322,38 +1334,22 @@ footer{
     cursor:pointer;
   }
 
-  /* Vertical mobile menu */
-  nav ul.active{
-    display:flex;
+  nav ul{
+    display:none;
     flex-direction:column;
     position:absolute;
-    top:70px;
+    top:80px;
     left:0;
     width:100%;
     background:#000;
-    padding:20px 0;
-    gap:20px;
+    padding:25px 0;
+    gap:25px;
     text-align:center;
   }
 
-}
-@media (max-width:768px){
-
-  .synergy{
-    font-size:60px !important;
-    flex-wrap:wrap;
-    justify-content:center;
-    text-align:center;
+  nav ul.active{
+    display:flex;
   }
-
-  .eee-icon{
-    font-size:45px !important;
-  }
-
-  .hero{
-    padding:40px 15px;
-  }
-
 }
 
 
@@ -1374,29 +1370,26 @@ footer{
   <div class="nav-logo">
     <img src="images/GCE LOGO 2.png">
   </div>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#events">Events</a></li>
     <li><a href="#register">Register</a></li>
     <li><a href="#contact">Contact</a></li>
-     <!-- ===== ADDED HEADER REGISTER BUTTON ===== -->
-   <li>
-<a href="registration.html" class="nav-register">
-
-
-    <i class="fa-solid fa-user-pen"></i> Register Now
-  </a>
-</li>
-<div class="menu-toggle" id="menuToggle">
-  <i class="fa-solid fa-bars"></i>
-</div>
-
-
-    <!-- ======================================== -->
-
+    <li>
+      <a href="registration.html" class="nav-register">
+        <i class="fa-solid fa-user-pen"></i> Register Now
+      </a>
+    </li>
   </ul>
 </nav>
+
 </header>
 
 
@@ -1428,8 +1421,7 @@ footer{
   <div class="time-box"><h2 id="m">00</h2>MIN</div>
   <div class="time-box"><h2 id="s">00</h2>SEC</div>
 </div>
-</section>
-</section>
+
 <div class="section-divider"></div>
 
 
@@ -1851,6 +1843,7 @@ footer{
     </iframe>
   </div>
 
+</section>
 
 <!-- FOOTER SECTION -->
 <section class="footer-section">
