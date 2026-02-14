@@ -14,6 +14,14 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
+  body{
+  overflow-x:hidden;
+}
+
+*{
+  max-width:100%;
+}
+
   *{
   margin:0;
   padding:0;
@@ -1018,9 +1026,6 @@ section{
 }
 
 
-}
-
-
 
 /* Slight zoom correction for specific images */
 .zoom-fix{
@@ -1300,6 +1305,57 @@ footer{
   flex:1 1 300px;
   max-width:350px;
 }
+/* ================= MOBILE FIX ================= */
+
+@media (max-width:768px){
+
+  /* Hide normal nav */
+  nav ul{
+    display:none;
+  }
+
+  /* Show hamburger */
+  .menu-toggle{
+    display:block;
+    font-size:26px;
+    color:#00e5ff;
+    cursor:pointer;
+  }
+
+  /* Vertical mobile menu */
+  nav ul.active{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    padding:20px 0;
+    gap:20px;
+    text-align:center;
+  }
+
+}
+@media (max-width:768px){
+
+  .synergy{
+    font-size:60px !important;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .eee-icon{
+    font-size:45px !important;
+  }
+
+  .hero{
+    padding:40px 15px;
+  }
+
+}
+
 
 
 </style>
@@ -1332,6 +1388,10 @@ footer{
     <i class="fa-solid fa-user-pen"></i> Register Now
   </a>
 </li>
+<div class="menu-toggle" id="menuToggle">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
 
     <!-- ======================================== -->
 
@@ -1976,6 +2036,13 @@ document.getElementById("contactForm").addEventListener("submit", async function
     alert("❌ Something went wrong. Please try again.");
   }
 });
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
 </script>
 
 
