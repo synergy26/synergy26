@@ -168,15 +168,27 @@
 
 .register-left,
 .register-right{
-  flex:1 1 500px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(12px);
-  padding:40px;
-  border-radius:20px;
-  border:1px solid rgba(0,229,255,0.4);
-  box-shadow:0 0 35px rgba(0,229,255,0.4);
+  background:rgba(0,0,0,0.85);
+  padding:45px;
+  border-radius:18px;
+  border:1px solid rgba(0,170,255,0.3);
   text-align:left;
+  max-width:600px;
+  margin:auto;
 }
+
+.register-right h2{
+  font-size:24px;
+  margin-bottom:20px;
+  color:#00aaff;
+}
+
+.register-right p{
+  color:#ccc;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
 
 /* QR SIDE */
 .qr-image{
@@ -732,14 +744,14 @@ section{
   margin-bottom:25px;
 }
 .main-title{
-  font-size:28px;
+  font-size:22px;
   letter-spacing:4px;
   color:#7fe9ff;
   text-shadow:0 0 12px rgba(0,229,255,.7);
 }
 .hosted{
   margin-top:10px;
-  font-size:18px;
+  font-size:15px;
   letter-spacing:3px;
   color:#00e5ff;
 }
@@ -806,7 +818,7 @@ section{
 /* CATCHY LINE */
 .catchy{
   margin-top:40px;
-  font-size:26px;
+  font-size:18px;
   font-weight:600;
   font-family:'Orbitron',sans-serif;
   letter-spacing:3px;
@@ -863,14 +875,27 @@ section{
 }
 
 .about-box{
-  flex:1 1 450px;
-  background:rgba(255,255,255,0.05);
-  padding:30px;
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-  border-left:5px solid #00e5ff;
-  transition:0.3s ease;
+  background:rgba(0,0,0,0.85);
+  padding:45px;
+  border-radius:18px;
+  border:1px solid rgba(0,170,255,0.3);
+  max-width:900px;
+  margin:auto;
+  text-align:left;
 }
+
+.about-box h2{
+  font-size:26px;
+  margin-bottom:20px;
+  color:#00aaff;
+}
+
+.about-box p{
+  color:#ccc;
+  line-height:1.8;
+  font-size:16px;
+}
+
 
 .about-box:hover{
   transform:translateY(-8px);
@@ -1070,14 +1095,13 @@ section{
 }
 
 .event-box{
-  background:rgba(255,255,255,0.08);
-  padding:40px;
-  border-radius:20px;
+  background:rgba(0,0,0,0.85);
+  padding:35px;
+  border-radius:16px;
+  border:1px solid rgba(0,170,255,0.3);
+  max-width:800px;
+  margin:auto;
   text-align:left;
-  transition:0.4s;
-  border:1px solid rgba(0,229,255,0.5);
-  box-shadow:0 0 30px rgba(0,229,255,0.4);
-  backdrop-filter:blur(8px);
 }
 
 .event-box:hover{
@@ -1309,10 +1333,30 @@ footer{
     letter-spacing:3px;
   }
 
-  .contact-info,
-  .contact-form{
-    padding:25px;
-  }
+.contact-info,
+.contact-form{
+  background:rgba(0,0,0,0.85);
+  padding:40px;
+  border-radius:16px;
+  border:1px solid rgba(0,170,255,0.3);
+  text-align:left;
+  max-width:500px;
+  margin:auto;
+}
+
+.contact-info h2,
+.contact-form h2{
+  font-size:22px;
+  margin-bottom:20px;
+  color:#00aaff;
+}
+
+.contact-info p{
+  margin-bottom:12px;
+  color:#ccc;
+  font-size:15px;
+  line-height:1.6;
+}
 
   /* FOOTER */
   .footer-logo{
@@ -1323,6 +1367,10 @@ footer{
     font-size:18px;
   }
 
+}
+html, body{
+  overflow-x:hidden;
+  width:100%;
 }
 
 
@@ -1341,15 +1389,16 @@ footer{
 <header>
 <nav>
 
-  <div class="hamburger" onclick="toggleMenu()">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
   <div class="nav-logo">
     <img src="images/GCE LOGO 2.png">
   </div>
 
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
   <ul id="navLinks">
+
     <li><a href="#home" onclick="closeMenu()">Home</a></li>
     <li><a href="#about" onclick="closeMenu()">About</a></li>
     <li><a href="#events" onclick="closeMenu()">Events</a></li>
