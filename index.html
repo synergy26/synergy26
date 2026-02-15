@@ -300,6 +300,7 @@
   align-items:center;              /* 🔥 VERTICAL CENTER */
   justify-content:center;          /* 🔥 HORIZONTAL CENTER */
   white-space:nowrap;
+  flex-direction:row; 
 }
 .main-card h2,
 .sub-card h3{
@@ -322,21 +323,22 @@
   transform:scale(1.08);
   box-shadow:0 0 60px rgba(0,229,255,1);
 }
-
 .main-card i{
-  font-size:50px;
-  margin-bottom:15px;
+  font-size:22px;        /* 🔥 Smaller icon */
+  margin-right:10px;     /* Space between icon & text */
   color:#00e5ff;
 }
-
 .event-row{
   display:flex;
-  justify-content:center;
-  align-items:stretch;
+  justify-content:center;   /* 🔥 Center horizontally */
+  align-items:center;       /* 🔥 Center vertically */
   gap:30px;
   flex-wrap:wrap;
   margin-top:40px;
+  width:100%;
+  text-align:center;
 }
+
 
 
 /* PREMIUM EVENT CARDS */
@@ -349,6 +351,8 @@
   border:1px solid rgba(0,229,255,0.3);
   text-align:center;
   overflow:hidden;
+  word-wrap:break-word;      /* 🔥 Prevent text overflow */
+  overflow-wrap:break-word;
 }
 
 
@@ -1170,15 +1174,15 @@ section{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:10px 22px;
+  padding:16px 38px;     /* 🔥 Bigger */
   border-radius:40px;
   background:linear-gradient(135deg,#00e5ff,#4facfe);
   color:#000;
-  font-weight:600;
-  font-size:14px;
+  font-weight:700;
+  font-size:18px;        /* 🔥 Bigger text */
   text-decoration:none;
   white-space:nowrap;
-  box-shadow:0 0 18px rgba(0,229,255,.5);
+  box-shadow:0 0 30px rgba(0,229,255,.7);
   transition:0.3s;
 }
 
