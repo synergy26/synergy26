@@ -104,10 +104,16 @@
   .event-card-premium{
     width:100%;
   }
+.contact-title{
+  font-size:28px;        /* smaller size */
+  text-align:center;
+  margin-bottom:40px;
+}
 
-  .contact-title{
-    font-size:40px;
-  }
+.contact-title span{
+  color:#00aaff;
+}
+
 
   .register-main-title{
     font-size:36px;
@@ -176,13 +182,16 @@
   width:100%;
   max-width:100%;
   padding:35px 25px;
-  border-radius:20px;          /* smooth corners */
+  border-radius:20px;
   box-sizing:border-box;
 
-  background:rgba(0,0,0,0.65); /* darker glass look */
-  border:2px solid #00e5ff;    /* 🔥 VISIBLE BORDER */
-  box-shadow:0 0 20px rgba(0,229,255,0.3); /* soft glow */
+  background:rgba(0,0,0,0.65);
+  border:2px solid #00e5ff;
+  box-shadow:0 0 20px rgba(0,229,255,0.3);
+
+  text-align:center;   /* 🔥 THIS LINE CENTERS EVERYTHING */
 }
+
 
 /* TEXT SAFETY */
 .register-right,
@@ -456,8 +465,10 @@
 }
 
 .map-container{
-  max-width:1000px;
+     width:100%;
+  max-width:100%;
   margin:auto;
+    margin-top:40px;
   border-radius:15px;
   overflow:hidden;
   background:rgba(255,255,255,0.05);
@@ -580,16 +591,34 @@
 }
 
   /* CONTACT SECTION */
+  body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;   /* prevents right overflow */
+}
+.contact-info,
+.contact-form,
+.map-container{
+  background:#111;
+  padding:30px 20px;
+  border-radius:20px;
+  margin-bottom:30px;
+}
+
 .contact-section{
-  padding:120px 8%;
-  text-align:center;
+  width:100%;
+  padding:60px 20px;
+  box-sizing:border-box;
 }
 
 .contact-title{
-  font-family:'Orbitron',sans-serif;
-  font-size:60px;
-  letter-spacing:6px;
-  margin-bottom:70px;
+  font-size:28px;        /* smaller size */
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.contact-title span{
+  color:#00aaff;
 }
 
 .contact-title span{
@@ -599,10 +628,12 @@
 
 .contact-container{
   display:flex;
+  flex-wrap:wrap;              /* allows stacking in mobile */
+  justify-content:center;      /* center horizontally */
+  align-items:center;
   gap:40px;
-  flex-wrap:wrap;
-  justify-content:center;
 }
+
 
 /* LEFT BOX */
 .contact-info{
@@ -614,6 +645,8 @@
   text-align:left;
   border:1px solid rgba(0,229,255,0.3);
   box-shadow:0 0 25px rgba(0,229,255,0.2);
+   word-wrap: break-word;        /* ✅ ADD HERE */
+   overflow-wrap: break-word;    /* ✅ ADD HERE */
 }
 
 .contact-info h2{
@@ -627,6 +660,8 @@
   gap:16px;
   margin-bottom:35px;
   align-items:flex-start;
+    word-wrap: break-word;
+   overflow-wrap: break-word;
 }
 
 .info-box i{
@@ -654,7 +689,11 @@
   border-radius:15px;
   border:1px solid rgba(0,229,255,0.3);
   box-shadow:0 0 25px rgba(0,229,255,0.2);
-  text-align:left;
+  text-align:center;
+    width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  margin:0 auto;
 }
 
 .contact-form h2{
@@ -672,6 +711,8 @@
   width:100%;
   padding:14px;
   margin-bottom:20px;
+   box-sizing:border-box;
+    text-align:center;
   background:rgba(0,0,0,0.6);
   border:1px solid rgba(0,229,255,0.3);
   border-radius:8px;
@@ -1432,6 +1473,19 @@ html, body{
   width:100%;
 }
 
+@media(max-width:768px){
+
+  .contact-container{
+    flex-direction:column;
+  }
+
+  .contact-info,
+  .contact-form,
+  .map-container{
+    width:100%;
+  }
+
+}
 
 
 </style>
@@ -1850,9 +1904,9 @@ html, body{
         <div>
           <h3>Call Us</h3>
           <p>
-            +91 79049 72082 - Over all Coordinator  <br>
-            +91 80566 80042 - Event Coordinator  <br>
-              +91 63819 92269 - Event Coordinator 
+            +91 79049 72082 - Hiridhar M  <br>
+            +91 80566 80042 - Selva Sudhan M  <br>
+              +91 63819 92269 - Safa S 
           </p>
         </div>
       </div>
@@ -1914,16 +1968,17 @@ html, body{
 <!-- LOCATION MAP SECTION -->
 <section class="map-section">
 
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps?q=Government+College+of+Engineering+Salem&output=embed"
-      width="100%" 
-      height="350" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </div>
+ <div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps?q=Government+College+of+Engineering+Salem&output=embed"
+    width="100%" 
+    height="350" 
+    style="border:0; border-radius:20px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
 
 
 <!-- FOOTER SECTION -->
