@@ -16,19 +16,7 @@
   /* ================= RESPONSIVE DESIGN ================= */
 
 /* Tablets */
-@media (max-width: 992px) {
 
-section{
-  min-height:100vh;
-  padding:140px 40px 80px;
-  position:relative;
-}
-
-@media (max-width:768px){
-  section{
-    padding:120px 20px 60px;
-  }
-}
 
   .synergy{
     font-size:80px;
@@ -51,8 +39,6 @@ section{
   .footer-heading::before{
     display:none;
   }
-
-}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -363,10 +349,6 @@ section{
 }
 
 
-.event-card-premium:hover{
-  transform:translateY(-15px);
-  box-shadow:0 0 70px rgba(0,229,255,1);
-}
 
 .event-card-premium i{
   font-size:40px;
@@ -730,9 +712,16 @@ nav ul li a:hover::after{width:100%}
 /* SECTION COMMON */
 section{
   min-height:100vh;
-  padding:140px 60px 80px;
+  padding:140px 40px 80px;
   text-align:center;
 }
+
+@media (max-width:768px){
+  section{
+    padding:120px 20px 60px;
+  }
+}
+
 
 /* TITLE SECTION */
 .title-box{
@@ -1015,9 +1004,14 @@ section{
 /* ================= EVENTS SECTION ================= */
 
 .events-section{
-  padding:120px 60px;
+  padding:120px  40px;
   background:rgba(0,0,0,0.65);
   backdrop-filter:blur(4px);
+}
+@media (max-width:768px){
+  .events-section{
+    padding:100px 20px;
+  }
 }
 
 .events-title{
@@ -1269,7 +1263,7 @@ footer{
     <li><a href="#register" onclick="closeMenu()">Register</a></li>
     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     <li>
-      <a href="registration.html" class="nav-register">
+      <a href="registration2.html" class="nav-register">
         <i class="fa-solid fa-user-pen"></i> Register Now
       </a>
     </li>
@@ -1613,7 +1607,7 @@ footer{
     <div class="important-box">
       ⚠ No On-Spot Registration. Payment proof is mandatory.
     </div>
-<a href="registration.html" class="register-btn">
+<a href="registration2.html" class="register-btn">
 
 
       CLICK HERE TO REGISTER
