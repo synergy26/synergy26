@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta charset="UTF-8">
 <title>SYNERGY 2026 | EEE Symposium</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -16,45 +13,30 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-
-
-  body{
-  overflow-x:hidden;
-}
-
-  body{
-  overflow-x:hidden;
-}
-
-*{
-  max-width:100%;
-}
-
-  *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html,body{
-  width:100%;
-  overflow-x:hidden;
-}
-
-img{
-  max-width:100%;
-  height:auto;
-}
-
-section{
-  padding:60px 8%;
-}
-
   /* ================= RESPONSIVE DESIGN ================= */
 
 /* Tablets */
+@media (max-width: 992px) {
 
+section{
+  min-height:100vh;
+  padding:140px 40px 80px;
+  position:relative;
+}
 
+@media (max-width:768px){
+  section{
+    padding:120px 20px 60px;
+  }
+}
+
+  .synergy{
+    font-size:80px;
+  }
+
+  .eee-icon{
+    font-size:70px;
+  }
 
   .contact-container,
   .register-container{
@@ -70,7 +52,76 @@ section{
     display:none;
   }
 
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+
+  nav{
+    padding:12px 20px;
+  }
+
+  nav ul{
+    gap:15px;
+    font-size:14px;
+  }
+
+  .main-title{
+    font-size:20px;
+  }
+
+  .synergy{
+    font-size:55px;
+    flex-wrap:wrap;
+  }
+
+  .eee-icon{
+    font-size:50px;
+  }
+
+  .tagline{
+    font-size:20px;
+  }
+
+  .info-row{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .time-box{
+    width:80px;
+    padding:15px;
+  }
+
+  .time-box h2{
+    font-size:28px;
+  }
+
+  .event-level{
+    flex-direction:column;
+  }
+
+  .main-card, .sub-card{
+    width:100%;
+  }
+
+  .event-row{
+    flex-direction:column;
+  }
+
+  .event-card-premium{
+    width:100%;
+  }
+
+  .contact-title{
+    font-size:40px;
+  }
+
+  .register-main-title{
+    font-size:36px;
+  }
+
+}
 
   /* REGISTER SECTION */
 .register-section{
@@ -648,37 +699,6 @@ header{
   background:rgba(0,0,0,0.3);
   backdrop-filter:blur(6px);
 }
-section{
-  scroll-margin-top:120px;
-}
-
-@media (max-width:768px){
-  section{
-    scroll-margin-top:100px;
-  }
-}@media (max-width:768px){
-
-  header{
-    height:70px;
-    display:flex;
-    align-items:center;
-  }
-
-}
-:root{
-  --header-height: 90px;
-}
-
-header{
-  height:var(--header-height);
-}
-
-#home{
-  padding-top:calc(var(--header-height) + 20px);
-}
-
-
-
 nav{
   display:flex;
   justify-content:space-between;
@@ -709,8 +729,8 @@ nav ul li a:hover::after{width:100%}
 
 /* SECTION COMMON */
 section{
-  min-height:auto;
-  padding:120px 60px 80px;
+  min-height:100vh;
+  padding:140px 60px 80px;
   text-align:center;
 }
 
@@ -986,6 +1006,7 @@ section{
 
 
 
+
 /* Slight zoom correction for specific images */
 .zoom-fix{
   transform:scale(1.08);
@@ -1143,530 +1164,83 @@ footer{
   background:#000;
   opacity:.7;
 }
+@media(max-width:900px){
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
 
-
-
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:0 20px;
-
-
-
-.event-card{
-  flex:1 1 300px;
-  max-width:350px;
+  .footer-heading::before{
+    display:none;
+  }
 }
-/* MOBILE NAV FIX */
-.menu-toggle{
+.hamburger{
   display:none;
+  font-size:24px;
+  color:#00e5ff;
+  cursor:pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  nav{
+    padding:15px 20px;
+  }
+
+  nav ul{
+    position:fixed;
+    top:0;
+    left:-100%;
+    height:100vh;
+    width:260px;
+    background:#000;
+    flex-direction:column;
+    padding-top:80px;
+    gap:30px;
+    transition:0.4s;
+    z-index:1000;
+  }
+
+  nav ul.active{
+    left:0;
+  }
+
+  nav ul li{
+    padding-left:20px;
+  }
+
+  .nav-logo img{
+    height:50px;
+  }
+}
+@media (max-width:768px){
+  .input-row{
+    flex-direction:column;
+  }
+}
+@media (max-width:768px){
+  .person img{
+    width:200px;
+    height:200px;
+  }
+
+  .person h3{
+    font-size:22px;
+  }
+
+  .person p{
+    font-size:14px;
+  }
 }
 
-
-/* ================= MOBILE COMPLETE FIX ================= */
-
-
-
-/* ---------- HEADER SPACING ---------- */
-
-header{
-  padding:12px 16px;
-}
-
-.nav-logo{
-  gap:8px;
-}
-
-.menu-toggle{
-  margin-left:8px;
-}
-
-/* space between logo & hamburger */
-
-
-/* ---------- HERO TEXT ---------- */
-
-.synergy{
-  font-size:48px !important;
-}
-
-.hero p{
-  font-size:14px !important;
-}
-
-.hero h3{
-  font-size:14px !important;
-}
-
-/* national level sentence smaller */
-
-
-/* ---------- TIMER TEXT ---------- */
-
-.timer-title{
-  font-size:14px !important;
-}
-
-.countdown-box{
-  width:70px;
-  height:70px;
-}
-
-/* Time is ticking reduced */
-
-
-/* ---------- ABOUT SECTION BOXES ---------- */
-
-.about-container{
-  flex-direction:column;
-}
-
-.about-box{
-  width:100%;
-  padding:25px;
-}
-
-.about-box p{
-  text-align:center;
-  font-size:14px;
-}
-
-/* bigger boxes + aligned */
-
-
-/* ---------- EVENT COORDINATORS ---------- */
-
-.person h3{
-  font-size:14px !important;
-}
-
-/* Abinu + Deva Dharshini name fix */
-
-
-/* ---------- EVENTS BLOCK ---------- */
-
-.event-row{
-  flex-direction:column;
-}
-
-.event-card{
-  width:100%;
-  padding:25px;
-}
-
-.event-card h3{
-  text-align:center;
-  font-size:16px;
-}
-
-/* blocks bigger + aligned */
-
-
-/* ---------- EVENT CATEGORY CLICK FIX ---------- */
-
-.event-level{
-  flex-direction:column;
-}
-
-/* ensures events appear BELOW button */
-
-
-/* ---------- RULE BOOK BUTTON ---------- */
-
-.rule-btn{
-  font-size:13px;
-  padding:10px 20px;
-}
-
-
-/* ---------- REGISTRATION SECTION ---------- */
-
-.register-container{
-  flex-direction:column;
-}
-
-.register-box{
-  width:100%;
-  padding:30px;
-}
-
-.register-box p{
-  font-size:14px;
-  text-align:center;
-}
-
-/* boxes enlarged */
-
-
-/* ---------- COMMUNICATION DESK ---------- */
-
-.contact-title{
-  text-align:center;
-}
-
-.contact-container{
-  flex-direction:column;
-}
-
-.contact-info{
-  width:100%;
-  padding:25px;
-  text-align:center;
-}
-
-/* aligned + enlarged */
-
-
-/* ---------- SEND MESSAGE ---------- */
-
-.contact-form{
-  width:100%;
-}
-
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-}
-
-/* form full width */
-
-
-/* ---------- GOOGLE MAP ---------- */
-
-.map iframe{
-  width:100% !important;
-  height:250px !important;
-}
-
-/* map visible on mobile */
-
-
-/* ---------- FOOTER ---------- */
-
-.footer-container{
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-}
-
-.footer-social{
-  justify-content:center;
-  gap:20px;
-}
-
-/* icons centered */
-
-}
-
-@media(max-width:768px){
-
-/* HEADER SPACING */
-
-nav{
-padding:8px 12px;
-}
-
-.nav-logo img{
-height:38px;
-}
-
-.menu-toggle{
-margin-left:10px;
-}
-
-/* HERO SECTION */
-
-.hero{
-padding-top:110px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.national{
-font-size:13px;
-}
-
-.hosted{
-font-size:13px;
-}
-
-.synergy{
-font-size:52px;
-}
-
-.catchy{
-font-size:13px;
-}
-
-.event-info{
-flex-direction:column;
-gap:12px;
-}
-
-/* TIMER */
-
-.time-box{
-width:65px;
-padding:8px;
-}
-
-.time-box h2{
-font-size:20px;
-}
-
-/* EVENTS TABS */
-
-.events-tabs{
-flex-direction:column;
-gap:12px;
-}
-
-.events-tabs button{
-width:100%;
-}
-
-/* EVENT CARDS */
-
-.event-row{
-flex-direction:column;
-}
-
-.event-card-premium,
-.main-card,
-.sub-card{
-width:100%;
-padding:22px;
-}
-
-/* ABOUT */
-
-.about-container{
-flex-direction:column;
-}
-
-.about-box{
-width:100%;
-padding:25px;
-text-align:center;
-}
-
-/* COORDINATORS */
-
-.person h3{
-font-size:14px;
-}
-
-/* RULEBOOK */
-
-.brochure-btn{
-width:100%;
-font-size:14px;
-padding:12px;
-}
-
-/* REGISTRATION */
-
-.registration-container{
-flex-direction:column;
-}
-
-.event-fee-block,
-.register-right{
-width:100%;
-padding:25px;
-}
-
-/* CONTACT */
-
-.contact-container{
-flex-direction:column;
-}
-
-.contact-info,
-.contact-form{
-width:100%;
-padding:25px;
-text-align:center;
-}
-
-.info-box{
-flex-direction:column;
-align-items:center;
-text-align:center;
-}
-
-/* FORM */
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-}
-
-/* MAP FIX */
-
-.map-container iframe{
-width:100%;
-height:250px;
-}
-
-/* FOOTER */
-
-.footer-container{
-flex-direction:column;
-text-align:center;
-gap:25px;
-}
-
-.footer-box div{
-justify-content:center;
-}
-
-/* QUICK LINKS ALIGN */
-
-.quick-links{
-align-items:center;
-}
-
-/* IDEALAB + ISTART */
-
-.partner-container{
-flex-direction:column;
-gap:30px;
-}
-
-.partner-box{
-width:100%;
-}
-
-/* BUTTON FIX */
-
-button{
-max-width:100%;
-}
-
-/* REMOVE SIDE SCROLL */
-
-body{
-overflow-x:hidden;
-}
-
-}
-@media(max-width:768px){
-
-/* HEADER */
-
-header{height:70px}
-nav{padding:10px 15px}
-
-.nav-logo img{height:40px}
-.menu-toggle{margin-left:10px}
-
-/* HERO */
-
-#home{padding-top:90px}
-
-.main-title{font-size:14px}
-.hosted{font-size:13px}
-.synergy{font-size:52px}
-.tagline{font-size:16px}
-.catchy{font-size:13px}
-
-/* TIMER */
-
-.timer{flex-wrap:wrap}
-.time-box{width:65px;padding:8px}
-.time-box h2{font-size:20px}
-
-/* ABOUT */
-
-.about-container{flex-direction:column}
-.about-box{width:100%;padding:25px;text-align:center}
-
-/* COORDINATORS */
-
-.person img{width:220px;height:220px}
-.person h3{font-size:14px}
-
-/* EVENTS */
-
-.event-level,
-.event-row{flex-direction:column}
-
-.main-card,
-.sub-card,
-.event-card-premium{width:100%}
-
-/* RULE BOOK */
-
-.brochure-btn{
-width:100%;
-padding:12px;
-font-size:14px;
-}
-
-/* REGISTRATION */
-
-.register-right,
-.event-fee-block{
-width:100%;
-padding:25px;
-}
-
-/* CONTACT */
-
-.contact-container{flex-direction:column}
-
-.contact-info,
-.contact-form{
-width:100%;
-padding:25px;
-text-align:center;
-}
-
-.info-box{
-flex-direction:column;
-align-items:center;
-}
-
-/* MAP */
-
-.map-container iframe{
-height:250px;
-}
-
-/* FOOTER */
-
-.footer-container{
-flex-direction:column;
-text-align:center;
-gap:25px;
-}
-
-.footer-box div{
-justify-content:center;
-}
-
-/* MENU */
-
-nav ul{
-top:70px;
-}
-
-/* REMOVE SIDE SCROLL */
-
-body{overflow-x:hidden}
-
-}
 
 
 </style>
-
 </head>
 
 <body>
@@ -1679,27 +1253,28 @@ body{overflow-x:hidden}
 
 <header>
 <nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
   <div class="nav-logo">
     <img src="images/GCE LOGO 2.png">
   </div>
 
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" id="menuToggle">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#register">Register</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <ul id="navLinks">
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#events" onclick="closeMenu()">Events</a></li>
+    <li><a href="#register" onclick="closeMenu()">Register</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     <li>
       <a href="registration.html" class="nav-register">
         <i class="fa-solid fa-user-pen"></i> Register Now
       </a>
     </li>
   </ul>
+
 </nav>
 
 </header>
@@ -1734,7 +1309,9 @@ body{overflow-x:hidden}
   <div class="time-box"><h2 id="s">00</h2>SEC</div>
 </div>
 </section>
+
 <div class="section-divider"></div>
+
 
 <!-- ABOUT -->
 <section id="about">
@@ -2154,7 +1731,6 @@ body{overflow-x:hidden}
     </iframe>
   </div>
 
-</section>
 
 <!-- FOOTER SECTION -->
 <section class="footer-section">
@@ -2340,14 +1916,16 @@ document.getElementById("contactForm").addEventListener("submit", async function
     alert("❌ Something went wrong. Please try again.");
   }
 });
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.querySelector("nav ul");
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+function closeMenu(){
+  document.getElementById("navLinks").classList.remove("active");
+}
 
 </script>
+
 
 
 
